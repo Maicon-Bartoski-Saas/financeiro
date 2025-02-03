@@ -1,0 +1,138 @@
+/* Variáveis */
+:root {
+    --bg-dark: #1a1a1a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-color: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.6);
+    --income-color: #00F0FF;
+    --expense-color: #FF007A;
+    --balance-color: #5773FF;
+    --dropdown-bg: #2a2a2a;
+}
+/* Container Principal */
+.transactions-container {
+    padding: 2rem 0;
+}
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabela de Transações */
+.table {
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
+.table th {
+    border-color: var(--border-color);
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 1rem;
+}
+
+.table td {
+    border-color: var(--border-color);
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+/* Status e Badges */
+.badge {
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.badge.income {
+    background-color: rgba(0, 240, 255, 0.1) !important;
+    color: var(--income-color);
+}
+
+.badge.expense {
+    background-color: rgba(255, 0, 122, 0.1) !important;
+    color: var(--expense-color);
+}
+
+/* Modal */
+.modal-content {
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom-color: var(--border-color);
+    padding: 1.5rem;
+}
+
+.modal-header .modal-title {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top-color: var(--border-color);
+    padding: 1.5rem;
+}
+
+/* Formulários */
+.form-control, .form-select {
+    background: var(--dropdown-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    background: var(--dropdown-bg);
+    border-color: var(--income-color);
+    color: var(--text-color);
+    box-shadow: 0 0 0 2px rgba(0, 240, 255, 0.2);
+}
+
+/* Botões */
+.btn-primary {
+    background: var(--income-color);
+    border-color: var(--income-color);
+    color: var(--bg-dark);
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: rgba(0, 240, 255, 0.8);
+    border-color: rgba(0, 240, 255, 0.8);
+    color: var(--bg-dark);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .transactions-container {
+        padding: 1rem 0;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+}

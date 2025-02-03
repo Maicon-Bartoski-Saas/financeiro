@@ -1,0 +1,271 @@
+/* Variáveis */
+:root {
+    --bg-dark: #1a1a1a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-color: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.6);
+    --income-color: #00F0FF;
+    --expense-color: #FF007A;
+    --balance-color: #5773FF;
+    --dropdown-bg: #2a2a2a;
+}
+
+/* Estilo Global */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+/* Container Principal */
+.main-container {
+    padding: 2rem 0;
+}
+
+/* Header da Página */
+.categories-header {
+    margin-bottom: 2rem;
+}
+
+.categories-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Lista de Categorias */
+.list-group {
+    background: transparent;
+}
+
+.list-group-item {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    border-radius: 8px !important;
+    padding: 1rem;
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Tabela de Categorias */
+.table {
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
+.table th {
+    border-color: var(--border-color);
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 1rem;
+}
+
+.table td {
+    border-color: var(--border-color);
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+/* Badges e Status */
+.badge {
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.badge.bg-info {
+    background-color: rgba(0, 240, 255, 0.1) !important;
+    color: var(--income-color);
+}
+
+.badge.bg-danger {
+    background-color: rgba(255, 0, 122, 0.1) !important;
+    color: var(--expense-color);
+}
+
+/* Botões de Ação */
+.btn-action {
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--income-color);
+    color: var(--income-color);
+}
+
+.btn-action.delete:hover {
+    border-color: var(--expense-color);
+    color: var(--expense-color);
+}
+
+/* Modal de Categoria */
+.modal-content {
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom-color: var(--border-color);
+    padding: 1.5rem;
+}
+
+.modal-header .modal-title {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.modal-header .btn-close {
+    color: var(--text-color);
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top-color: var(--border-color);
+    padding: 1.5rem;
+}
+
+.form-label {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-control {
+    background: var(--dropdown-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    background: var(--dropdown-bg);
+    border-color: var(--income-color);
+    color: var(--text-color);
+    box-shadow: 0 0 0 2px rgba(0, 240, 255, 0.2);
+}
+
+.form-select {
+    background-color: var(--dropdown-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.form-select:focus {
+    background-color: var(--dropdown-bg);
+    border-color: var(--income-color);
+    color: var(--text-color);
+    box-shadow: 0 0 0 2px rgba(0, 240, 255, 0.2);
+}
+
+/* Botões do Modal */
+.btn-primary {
+    background: var(--income-color);
+    border-color: var(--income-color);
+    color: var(--bg-dark);
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: rgba(0, 240, 255, 0.8);
+    border-color: rgba(0, 240, 255, 0.8);
+    color: var(--bg-dark);
+}
+
+.btn-secondary {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1rem 0;
+    }
+
+    .card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-action {
+        padding: 0.4rem;
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .categories-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .card {
+        font-size: 1.1rem;
+    }
+
+    .table-responsive {
+        margin: 0 -1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+}
