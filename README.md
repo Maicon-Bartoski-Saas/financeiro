@@ -2,6 +2,11 @@
 
 Sistema web para controle financeiro pessoal desenvolvido em PHP, MySQL e Bootstrap.
 
+## Senha Padrão De Login
+
+e-mail: admin@admin.com
+Senha: admin@123
+
 ## Estrutura do Projeto
 
 ```
